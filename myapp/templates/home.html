@@ -1,0 +1,130 @@
+<head>
+
+
+<style>
+body {
+ overflow-x: hidden;
+ background-image: url(https://source.unsplash.com/random/1920x1080/?money);
+}
+#topbar
+{
+  background-color:#87CEEB; 
+  width:100%;
+  height:80px;
+  /* display:block; */
+  margin: 0;
+}
+
+#bank
+{
+  font-style:italic;
+  margin-left:100px;
+  font-size:50px;
+}
+
+#hindi
+{
+ position:relative;
+ /* left:500px; */
+ top:-70px;
+ left:450px;
+}
+
+#form1
+{
+ background-color:black;
+ color:white;
+ width:400px;
+ height:350px;
+ margin-top:0px;
+ margin-left:10%;
+}
+
+#button:hover
+{
+  cursor:pointer;
+  /* background-color:#87CEEB; */
+  border-radius:2px;
+}
+
+
+</style>
+
+
+</head>
+
+<body style="margin:0px ">
+
+<div id="topbar">
+<p id="bank">INDIAN BANK</p>
+<p id="hindi">आपका अपना बैंक</p>
+</div>
+
+
+
+
+
+<div id="form1">
+<form style="margin-left:30%" action=display method=post>
+{% csrf_token %}
+<h2 style="margin-top: 0; padding-top: 20px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L o g i n</h2><br><br>
+
+Customer Id<br><br>
+
+<input type="text" name="id">
+<br><br>
+
+Password<br><br>
+ 
+<input type="password" name="passwd">
+<br><br>
+
+<input type="submit" value="Login" name="login" style="margin-left:60px" id="button"><br><br>
+<input type="submit" value="Admin-Login" name="adlog" style="margin-left:40px" id="button"><br>
+
+</form>
+
+
+
+
+</div>
+
+
+
+<div style="height:200px;padding:9px;  margin-left: 50px;">
+
+<p>
+<font style="font-style:italic" size=6px>Welcome to Indian bank ..the bank that believes in you and India believes in us..</font><br>
+<font size=5px style="font-style:italic">Aim and objectives...</font>
+<ul>
+
+<li>We are here you provide you the best services in the whole market..</li><br>
+<li>We aim to contribute to our Economy to make it best of all..</li><br>
+<li>Customer satisfaction is our satisfaction..</li>
+</ul>
+</p>
+</div>
+
+<div style="height:300px;margin-left: 40px;">
+
+<p>
+<ul>
+<font size=5px style="font-style:italic">
+<li>Account opening at minimal charges</li><br>
+<li>Transcations through netbanking only</li><br>
+<li>Account open ..update...delete in few seconds</li><br>
+NOTE-<br>
+<li>RBI कहता है कि अपना  OTP किसी शेयर  ना करे    जानकार  बनिए. .... सतर्क रहिए...</li><br>
+</font>
+</ul>
+</p>
+
+
+</div>
+
+
+
+
+
+</body>
+

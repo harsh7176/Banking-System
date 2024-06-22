@@ -1,0 +1,137 @@
+<head>
+
+
+<style>
+body{
+  margin: 0;
+  /* background-color: white; */
+  overflow-x: hidden;
+}
+
+
+#topbar
+{
+  background-color:#87CEEB;
+  width:100%;
+  height:120px;
+  display:block;
+  border:5px solid black;
+  
+}
+
+#bank
+{
+  font-style:italic;
+  margin:30px 0px 0px 120px;
+  font-size:50px;
+
+}
+
+#hindi
+{
+ position:relative;
+ left:500px;
+ top:-40px;
+ left:470px;
+}
+
+#credit
+{
+  padding:10px;
+  background-color:#FFD580;
+  height:400px;
+
+
+}
+
+#debit
+{
+  padding:10px;
+  background-color:#FFB6C1;
+  height:400px;
+
+
+}
+
+
+table,td,th
+{
+  border:1px solid black;
+  border-collapse:collapse;
+  font-size:20px;
+  width:700px;
+  height:30px;
+  border-radius:2px;
+
+}
+
+
+
+
+</style>
+
+</head>
+
+
+<body>
+<div id="topbar">
+<p id="bank">INDIAN BANK...</p>
+<p id="hindi">आपका अपना बैंक</p>
+</div>
+<br>
+<center>
+<h1>Welcome to Your Transactions History</h1>
+<br><br>
+
+<div id="credit">
+<h2>Credit Details</h2>
+
+<table >
+<tr>
+<th>Transaction Id</th>
+<th>Received From</th>
+<th>Amount</th>
+<th>Date</th>
+</tr><br>
+{% for i in r %}
+<tr>
+<td>{{i.trans_id}}</td>
+<td>{{i.sendr_id}}</td>
+<td>{{i.val}}</td>
+<td>{{i.dat|date:'Y-m-d'}}</td>
+</tr>
+
+{% endfor %}
+</table>
+
+</div>
+
+
+
+<div id="debit">
+<h2>Debit Details</h2>
+
+<table >
+<tr>
+<th>Transaction Id</th>
+<th>Send To</th>
+<th>Amount</th>
+<th>Date</th>
+</tr><br>
+{% for i in s %}
+<tr>
+<td>{{i.trans_id}}</td>
+<td>{{i.recevr}}</td>
+<td>{{i.val}}</td>
+<td>{{i.dat|date:'Y-m-d'}}</td>
+</tr>
+
+{% endfor %}
+</table>
+
+</div>
+
+</center>
+
+
+</body>

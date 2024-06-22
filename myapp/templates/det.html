@@ -1,0 +1,114 @@
+
+<head>
+
+<style>
+body{
+  overflow-x: hidden;
+  margin: 0;
+}
+
+#topbar
+{
+  background-color:#87CEEB;
+  width:100%;
+  height:100px;
+  display:block;
+  border: 5px solid black;
+}
+
+#bank
+{
+  font-style:italic;
+  margin:20px 0 0 120px;
+  font-size:50px;
+
+}
+
+#hindi
+{
+ position:relative;
+ left:500px;
+ top:-35px;
+ left:470px;
+}
+
+#a
+{
+  margin-top:50px;
+  background-color:#91E0FF;
+  border:2px solid black;
+  width:400px;
+  height:530px;
+
+}
+
+#but
+{
+  width:150px;
+  height:25px;
+}
+
+#but:hover
+{
+  background-color:black;
+  color:white;
+  cursor:pointer;
+}
+
+
+</style>
+
+</head>
+
+
+<body bgcolor=white>
+<div id="topbar">
+<p id="bank">INDIAN BANK...</p>
+<p id="hindi">आपका अपना बैंक</p>
+</div>
+
+
+<center>
+
+<div id="a">
+
+<h1>Customer Details</h1><br>
+
+<form action="modify" method=post>
+{%csrf_token%}
+
+Customer Id&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="number" name="id" value={{id}} readonly><br><br><br>
+
+
+Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="text" name="name"  value={{name}}  readonly><br><br><br>
+
+Balance&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="number" name="bal"   value={{bal}} readonly><br><br><br>
+
+
+<font style="margin-left:-60px;">Account Open Date&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="date" name="date"  value={{date|date:'Y-m-d'}} readonly></font><br><br><br>
+
+
+<input type="submit" name="changepass"  value="Change Password" id="but"><br><br>
+
+<input type="submit" name="sendmoney"  value="Send Money" id="but"><br><br>
+
+<input type="submit" name="showtrans"  value="Show Transactions" id="but"><br><br>
+<input type="hidden" name="passwd" value={{passwd}}>
+
+</form>
+<form action="/">
+  <button id="but">cancel</button>
+</form>
+
+
+
+</div>
+
+
+
+</center>
+</body>s
